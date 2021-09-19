@@ -1,0 +1,48 @@
+body{
+    background-color: orange;
+    margin: 5px; /* par défaut body a un margin d'environ 5px */
+    /* padding: 0; */
+}
+div.b1{
+    width: 700px;
+    height: 200px;
+    background-color: greenyellow;
+}
+div.b2{
+    width: 700px;
+    height: 200px;
+    background-color: greenyellow;
+    padding: 2em;
+}
+div.b3{
+    width: 700px;
+    height: 200px;
+    background-color: greenyellow;
+    padding: 2em;
+    border: 10px solid transparent;
+}
+div.b4{
+    width: 700px;
+    height: 200px;
+    background-color: greenyellow;
+    padding: 2em;
+    border: 10px solid blue;
+    margin: 3em;
+}
+div.b5{
+    width: 700px;
+    height: 200px;
+    background-color: greenyellow;
+    padding: 2em;
+    border: 10px solid blue;
+    margin: 3em;
+    box-sizing: border-box;
+}
+div.b6{
+    width: 700px;
+    height: 200px;
+    background-color: greenyellow;
+    padding: 2em;
+    border: 10px solid blue;
+    box-sizing: border-box;
+}

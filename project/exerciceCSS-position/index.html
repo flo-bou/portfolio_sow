@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Positionnement</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <span text-align="right"><a href="../index.html"> Retour à l'index général des exercices </a><big>⤴</big></span>
+  <h1>Positionnement</h1>
+
+  <main>
+    <p>Un premier paragraphe</p>
+    <p class="relatif haut">Un deuxième paragraphe</p>
+    <p>Un <span class="relatif haut gauche">troisième</span> paragraphe</p> <!-- troisieme est ici un espace vide où il devrait être en temps normal et se trouve maintenant en dehors de son p parent -->
+    <div class="carre bleu"></div>
+    <div class="carre vert relatif haut droite"></div>
+    <div class="carre bleu"></div>
+
+    <br><br>
+    <p>Un premier paragraphe</p>
+    <p class="absolu haut">Un deuxième paragraphe</p>
+    <p>Un troisième paragraphe</p>
+    <br><br>
+    <div class="conteneur relatif">
+      <div class="carre bleu"></div>
+      <div class="carre vert absolu bas droite"></div><!-- se place en bas à droite d'après le div conteneur qui est lui aussi positionné -->
+      <div class="carre bleu"></div>    <!-- ce 3eme carré est collé au 2eme comme si le 2eme n'exitait pas car il est positionné en absolute, cad retiré du flux normal, aucune place ne lui est alloué, il est juste "au-dessu" -->
+    </div>
+
+    <h2>Sans z-index :</h2>
+    <div class="carre bleu relatif"></div>
+    <div class="carre relatif vert decale"></div>    <!-- les éléments positionnés avec les props top, right,... sont au-dessus de ceux n'ayant pas une de ces props -->
+    <h2>Avec z-index 100 sur bleu:</h2>
+    <div class="carre bleu relatif z100"></div>
+    <div class="carre relatif vert decale"></div>
+
+  </main>
+
+</body>
+
+</html>

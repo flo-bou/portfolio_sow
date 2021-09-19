@@ -1,0 +1,128 @@
+# English
+# Information for curious and developer.
+# The rules of robots.txt apply to all search engines and the top five global: Google, Bing, Yahoo !, Baidu and Yandex.
+# To make it much harder for the curious to understand the real names of files and folder paths, this file uses only a notation with wildcards.
+# File created by: Patrick LOPES-REGO.
+# Français
+# Informations pour les curieux et les développeurs.
+# Les règles du robots.txt s'appliquent à tous les moteurs de recherche et aux cinq principaux mondiaux : Google, Bing, Yahoo!, Baidu et Yandex.
+# Pour rendre beaucoup plus difficile aux curieux la compréhension des vrais noms des fichiers et des chemins des dossiers, ce fichier utilise uniquement une notation avec des "wildcards".
+# Aide en Français sur le fichier robots.txt à cette adresse : http://robots-txt.com/
+# Fichier créé par : Patrick LOPES-REGO.
+
+# Rules for all robots
+# Règles pour tous les robots
+User-agent: *
+Disallow: /ass*
+Disallow: /Mail*
+Disallow: /Mini*
+Disallow: /port*
+Disallow: /im*
+Disallow: /*.txt$
+Disallow: /*?
+Allow: /sitemap.htm
+Sitemap: https://www.schoolofweb.tech/sitemap.xml
+
+# Google-specific rules
+User-agent: Googlebot
+Disallow: /ass*
+Disallow: /Mail*
+Disallow: /Mini*
+Disallow: /port*
+Disallow: /im*
+Disallow: /*.txt$
+Disallow: /*?
+Allow: /sitemap.htm
+Sitemap: https://www.schoolofweb.tech/sitemap.xml
+
+# Google Image Specific Rules
+# Règles spécifiques à Google Image
+User-agent: Googlebot-Image
+Disallow: /ass*
+Disallow: /Mail*
+Disallow: /Mini*
+Disallow: /port*
+Disallow: /im*
+
+# Microsoft Bing-specific rules
+# Règles spécifiques à Microsoft Bing
+User-agent: bingbot
+Disallow: /ass*
+Disallow: /Mail*
+Disallow: /Mini*
+Disallow: /port*
+Disallow: /im*
+Disallow: /*.txt$
+Disallow: /*?
+Allow: /sitemap.htm
+Sitemap: https://www.schoolofweb.tech/sitemap.xml
+
+# MSN-specific rules
+# Règles spécifiques à Microsoft MSN
+User-agent: msnbot
+Disallow: /ass*
+Disallow: /Mail*
+Disallow: /Mini*
+Disallow: /port*
+Disallow: /im*
+Disallow: /*.txt$
+Disallow: /*?
+Allow: /sitemap.htm
+Sitemap: https://www.schoolofweb.tech/sitemap.xml
+
+# Yahoo!-specific rules
+# Règles spécifiques à Yahoo!
+User-agent: Yahoo! Slurp
+Disallow: /ass*
+Disallow: /Mail*
+Disallow: /Mini*
+Disallow: /port*
+Disallow: /im*
+Disallow: /*.txt$
+Disallow: /*?
+Allow: /sitemap.htm
+Sitemap: https://www.schoolofweb.tech/sitemap.xml
+
+# Specific rules for Baidu (China)
+# Règles spécifiques à Baidu (Chine)
+User-agent: Baiduspider
+Disallow: /ass*
+Disallow: /Mail*
+Disallow: /Mini*
+Disallow: /port*
+Disallow: /im*
+Disallow: /*.txt$
+Disallow: /*?
+Allow: /sitemap.htm
+Sitemap: https://www.schoolofweb.tech/sitemap.xml
+
+# Specific rules for Baidu Image (China)
+# Règles spécifiques à Baidu Image (Chine)
+User-agent: Baiduspider-image
+Disallow: /ass*
+Disallow: /Mail*
+Disallow: /Mini*
+Disallow: /port*
+Disallow: /im*
+
+# Rules specific to Yandex (Russia)
+# Règles spécifiques à Yandex (Russie)
+User-agent: Yandex
+Disallow: /ass*
+Disallow: /Mail*
+Disallow: /Mini*
+Disallow: /port*
+Disallow: /im*
+Disallow: /*.txt$
+Disallow: /*?
+Allow: /sitemap.htm
+Sitemap: https://www.schoolofweb.tech/sitemap.xml
+
+# Rules specific to Yandex Image (Russia)
+# Règles spécifiques à Yandex Image (Russie)
+User-agent: YandexImages
+Disallow: /ass*
+Disallow: /Mail*
+Disallow: /Mini*
+Disallow: /port*
+Disallow: /im*

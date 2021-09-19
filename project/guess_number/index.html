@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Jeu : Devinez le nombre</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" async></script>
+  </head>
+
+  <body>
+    <h1>Jeu : Devinez le nombre</h1>
+
+    <p>J'ai choisi un nombre au harsard entre 1 et 100. Sauras-tu le deviner en 10 tentatives ou moins ? Je t'indiquerais si tes propositions sont trop hautes ou trop basses.</p>
+    <p>C'est parti pour la partie !</p>
+
+    <div class="form">
+      <label for="guessField">Proposez un nombre: </label>
+      <input type="text" id="guessField" class="guessField">
+      <input type="submit" value="Submit guess" class="guessSubmit">
+    </div>
+
+    <div class="resultParas">
+      <p class="guesses"></p>
+      <p class="lastResult"></p>
+      <p class="lowOrHi"></p>
+    </div>
+
+  </body>
+
+</html>

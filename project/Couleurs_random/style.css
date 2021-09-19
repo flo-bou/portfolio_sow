@@ -1,0 +1,67 @@
+body {
+    background-color: beige;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(71, 71, 85);
+}
+
+div, button[id=rndColor]{
+    margin-top: 15vh;
+}
+
+button{
+    background-color: rgba(245, 245, 245, 0.5);
+    /* petite animation css */
+}
+
+.label, button[id=rndColor]{
+    display: inline-block;
+    font-size: 1.2em;
+    border: 1px solid rgb(71, 71, 85);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.label label, .label input, .label button{
+    display: inline;
+    padding: 0.8rem;
+    margin: 0;
+    line-height: inherit;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.label input{
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 1px;
+    border-right: 1px;
+    border-color: rgb(71, 71, 85);
+    box-sizing: border-box;
+    width: 8em;
+}
+.label button{
+    border: 0;
+    border-left: 1px;
+}
+
+button[id=rndColor]{
+    padding: 0.8rem;
+}
+
+button:hover, button:focus {
+    background-color: rgb(71, 71, 85);
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+span#currentColor{
+    display: block;
+    font-size: 8vw;
+    color: white;
+    text-shadow: 0px 0px 1px grey;
+    opacity: 0.5;
+    text-align: initial;
+    position: absolute;
+    bottom: 5vh;
+}

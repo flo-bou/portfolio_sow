@@ -1,0 +1,40 @@
+main{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 1em;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 1400px){
+    main{
+        grid-template-columns: auto;
+    }
+}
+
+h1{
+    color: maroon;
+    text-align: center;
+}
+div.parent{
+    max-height: 100vh;
+    max-width: 100%;
+    background-color: antiquewhite;
+    border-radius: 0.5em;
+    overflow: hidden;
+}
+h2{
+    color: maroon;
+    padding-left: 1em;
+    margin-bottom: 1em;
+    border-bottom: 2px solid maroon;
+}
+div.dia{
+    width: 600px; 
+    max-width:100%;
+    border:1px double maroon; 
+    margin-left: auto;
+    margin-right: auto;
+    /* margin: 1em auto; */
+    overflow: initial;
+}

@@ -1,0 +1,98 @@
+main{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+section {
+  background-color: beige;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+div{
+  width: 70%;
+  height: 100px;
+  padding: 40px;
+  margin: 20px auto;
+  border: 2px solid black;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: orange;
+}
+
+ /* s1 */
+#s1 #foo {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: #c00;
+  position: absolute;
+  top: 250px;
+  left: 400px;
+  transition: transform 1s; /* On cible la propriété transform */
+}
+
+ /* s2 */
+#s2 > .d1{
+  transition-property: background-color;
+  transition-duration: 5s;
+}
+#s2 > .d2{
+  transition-property: background-color, border;
+  transition-duration: 5s;
+}
+#s2 > .d3{
+  transition-property: all; /* ici on cible toutes les propriétés qui seront modifiées par la suite : tout changement de prop CSS dans ce div sera soumis à cette transition */
+  transition-duration: 5s;
+}
+#s2 > .d1:hover, #s2 > .d2:hover, #s2 > .d3:hover{
+  background-color: blue;
+  border: 5px solid red;
+  color: white;
+}
+
+ /* s3 */
+#s3 .d1, #s3 .d2, #s3 .d3, #s3 .d4, #s3 .d5, #s3 .d6{
+  transition-property: width;
+  transition-duration: 2s;
+}
+
+#s3 .d1{
+  transition-timing-function: ease;
+}
+#s3 .d2{
+  transition-timing-function: ease-in;
+}
+#s3 .d3{
+  transition-timing-function: ease-out;
+}
+#s3 .d4{
+  transition-timing-function: ease-in-out;
+}
+#s3 .d5{
+  transition-timing-function: linear;
+}
+#s3 .d6{
+  transition-timing-function: cubic-bezier(0.6, 0, 1, 1);
+}
+
+#s3 .d1:hover, #s3 .d2:hover, #s3 .d3:hover, #s3 .d4:hover, #s3 .d5:hover, #s3 .d6:hover{
+  width: 100%;
+}
+
+/* s4*/
+
+#s4 .d1{
+  transition: width 0.5s linear 1s, background-color 0.5s linear 1s; /* Ici on défini du coup la transition de l'état plus hover vers l'état de départ */
+}
+#s4 .d1:hover{
+  background-color: blue;
+  width: 100%;
+  transition-duration: 5s; /* Ici on défini la transition de l'état de départ vers le hover*/
+  transition-delay: 0s;
+}

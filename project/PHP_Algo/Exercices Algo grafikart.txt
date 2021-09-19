@@ -1,0 +1,121 @@
+
+------------- Chapitre 1 -------------
+
+Exo 1 :
+C vaut 24
+
+Exo 2 :
+échange des valeurs entre A et B :
+C = A
+A = B
+B = C
+
+Exo 3 :
+C vaut 12312 et est de type string
+
+------------- Chapitre 2 --------------
+
+Exo 1:
+
+DEBUT
+	ECRIRE "Quel est le prix HT de ce produit ?"
+	LIRE prixHT
+	prixTTC = prixHT * 1.196
+	ECRIRE "Le prix TTC de ce produit est de ", prixTTC
+FIN
+
+Exo 2:
+DEBUT
+	ECRIRE "Bonjour, quel est votre prénom ?"
+	LIRE prenom
+	ECRIRE "Quel est votre nom ?"
+	LIRE nom
+	ECRIRE "Bonjour ", prenom, " votre nom est ", nom, "."
+FIN
+
+------------- Chapitre 3 --------------
+
+Exo 1 :
+DEBUT
+	ECRIRE "Entrez un premier nombre"
+	LIRE a
+	ECRIRE "Entrez un second nombre"
+	LIRE b
+	SI (a > 0 ET b > 0) OU (a < 0 ET b < 0 ) ALORS
+		ECRIRE "Le produit de ces deux nombre est positif"
+	SINON SI (a > 0 ET b < 0) OU (a > 0 ET b < 0 ) ALORS
+		ECRIRE "Le produit de ces deux nombre est négatif"
+	SINON SI a == 0 OU b == 0 ALORS
+		ECRIRE "Le produit de ces deux nombre est négatif"
+	SINON
+		ECRIRE "Oups ! Quelque chose n'a pas marché"
+	FINSI
+FIN
+
+ou plus simplemetn :
+	SI A * B >= 0 ALORS
+        ECRIRE "A x B est positif"
+    SINON
+        ECRIRE "A x B est négatif"
+    FINSI
+
+Exo 2 :
+DEBUT
+	ECRIRE "Bonjour, quel est votre age ?"
+	LIRE age
+	SI age < 13 ALORS
+		ECRIRE "Vous avez ", age, ", vous pouvez aller voir le film Action Man"
+	SINON SI age >= 13 ET age <= 18 ALORS
+		ECRIRE "Vous avez ", age, ", vous pouvez aller voir le film Bambi vs Spiderman"
+	SINON SI age > 18 ALORS
+		ECRIRE "Vous avez ", age, ", vous pouvez aller voir le film Evil Dead"
+	SINON ALORS
+		ECRIRE "Oups ! Quelque chose n'a pas marché"
+	FINSI
+
+------------- Chapitre 4 --------------
+
+Exo 1:
+DEBUT
+	ECRIRE "Bonjour, veuillez entrer un nombre entre 0 et 10"
+	LIRE nbre
+	TANTQUE nbre <= 0 ET nbre >= 10 ALORS
+		ECRIRE "Ce nombre n'est pas correct, veuillez entrer un autre nombre"
+		LIRE nbre	
+	ECRIRE "Votre nombre est ", nbre
+FIN
+
+Exo 2:
+DEBUT
+	ECRIRE "Bonjour, veuillez entrer un nombre entre 0 et 10"
+	LIRE nbre
+	TANTQUE nbre <= 0 ET nbre >= 10 ALORS
+		ECRIRE "Ce nombre n'est pas correct, veuillez entrer un autre nombre"
+		LIRE nbre
+	temp = nbre
+	TANTQUE temp > 0 ALORS
+		ECRIRE temp
+		temp = temp - 1
+FIN
+
+Exo 3:
+DEBUT
+	aDeviner = 14
+	ECRIRE "J'ai choisi un nombre, devine-le !"
+	LIRE proposition
+	SI proposition > aDeviner ALORS
+		ECRIRE "Nope, trop grand."
+	SINON SI proposition < aDeviner ALORS
+		ECRIRE "Trop petit. Grandis un peu stp !"
+	SINON SI proposition == aDeviner ALORS
+		ECRIRE "Oui, tout pile ! Et de la première fois !"
+	SINON
+		ECRIRE "Oups ! Quelque chose n'a pas marché"
+FIN
+
+
+
+
+
+
+

@@ -1,0 +1,84 @@
+@keyframes fondu{
+    0%{background-image: url("diapo1.png");}
+    33.33%{background-image: url("diapo2.png");}
+    66.67%{background-image: url("diapo3.png");}
+    100%{background-image: url("diapo1.png");}
+}
+
+.d1{/* diapo à largeur fixe */
+    width: 576px;
+    height: 432px;
+    margin: 50px auto; /* auto met au milieu */
+    box-shadow: 5px 15px 10px -5px #777; /* légèrement décalé à gauche */
+    background-color: #EEE;
+    background-size: contain; /* pq ?*/
+    animation: fondu 15s ease-in-out infinite both;
+}
+.conteneur{ /* cadre à largeur fixe */
+    max-width: 576px;
+    margin: 50px auto;
+}
+.d2{ /* cadre à largeur flexible */
+    width: 100%;
+    height: 0px; /* height en % se rapporte à la hauteur disponible (donc du parent) or, on voudrait que la hauteur se rapporte au contenu (au width en fait), donc on utilise pas height mais un padding (marge intérieur) */
+    padding-top: 75%; /* sert ici à donner la hauteur, car on va définir celle-ci en fonction du format de l'image et non donner une hauteur fixe. Ici la hauteur fera toujours 75% de la largeur*/
+    margin: 50px auto; /* inutile ici */
+    box-shadow: 0px 0px 10px #777;
+    background-color: #EEE;
+    background-size: contain;
+    animation: fondu 15s ease-in-out infinite both; /* la transition ne marche pas sous firefox dev */
+}
+
+.d1:hover, .d2:hover{
+    animation-play-state: paused;
+}
+
+/* ----------- Code pour le diaporama avec effet de défilement ---------------- */
+/* Ici on va utiliser une image très longue contenant les images du panorama, puis l'animer
+Pour cela on peut soit utiliser la propriété background-position 
+soit la propriété transform avec sa fonction translate()
+
+Dans cet exemple, on va définir en px les largeurs maximales des boites puis leur hauteur d'après les ratios des images en background que l'on veut afficher (afin de les avoir en entier)
+
+*/
+@keyframes defilement{
+    0%{transform: translate(0,0); }/* au début de la translation elle est à 0*/
+    100%{transform: translate(-2880px,0); }/* à 100% de l'anim, la translation est à -2880px (et toujours 0 en vertical, pas de changement) */
+}
+.conteneur1{ /* cadre à largeur fixe */
+    overflow: hidden;
+    max-width: 960px;
+    margin: 50px auto;
+    box-shadow: 5px 15px 10px -5px #777;
+}
+.c1{
+    width: 3840px; /* largeur = largeur de la triple image (2880px) + largeur d'une de ses composante (960px), pour la transition entre la fin de l'image et son début. Le début de l'image réapparait (car en infinite) et diaprait lorsque l'animation atteind les 100% puis à 0% réapparait la même image (ni vu ni connu) */
+    height: 720px;
+    background-color: #EEE;
+    background: url("diapo123.png");
+    background-size: contain;
+    animation: defilement 12s linear infinite; /* si pas de valeur infinite, l'animation se stoppe à 100% */
+}
+
+/* si on donne une largeur de 2880px au c1, et qu'on donne 1920 (=2880-960) au translate alors la transition entre l'image 3 et 1 se fait immédiatement sans défilement
+si on donne 3840px au c1 et 2880px au translate, alors on transitionne avec défilement entre 3 et 1 (grace à la valeur infinite) puis entre 100% de transi et 0% on clipe de l'image 1 à l'image 1 (on n'y voit que du feu !)
+*/
+@keyframes defilement2{
+    0%{transform: translate(0,0); }/* au début de la translation elle est à 0*/
+    100%{transform: translate(-75%,0); }/* à 100% de l'anim, la translation est à -2880px (et toujours 0 en vertical, pas de changement) */
+}
+.conteneur2{ /* cadre à largeur fixe (taille max) */
+    overflow: hidden;
+    max-width: 960px;
+    margin: 50px auto;
+    box-shadow: 5px 15px 10px -5px #777;
+}
+.c2{ /* cadre à largeur flexible */
+    width: 400%; /* width agit aussi sur l'image de fond */
+    height: 0px; /* height en % se rapporte à la hauteur disponible (donc du parent) or, on voudrait que la hauteur se rapporte au contenu (au width en fait), donc on utilise pas height mais un padding (marge intérieur) */
+    padding-top: 75%; /* la hauteur fait 75% de la largeur de l'image  PADDING EN % SE RAPPORTE AU WIDTH DU BLOCK */
+    background-color: #EEE;
+    background: url("diapo123.png");
+    background-size: contain;
+    animation: defilement2 12s linear infinite; /* si pas de valeur infinite, l'animation se stoppe à 100% */
+}

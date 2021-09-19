@@ -1,0 +1,151 @@
+/* OBJECTIF 
+nous voulons que les éléments de menu s’affichent en colonne 
+et voulons également que le menu soit replié par défaut pour éviter qu’il ne consomme trop de place sur l’écran.
+*/
+
+/* Reset CSS */
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Avenir, sans-serif;
+}
+nav{
+    width: 100%;
+    margin: 0 auto;
+    background-color: lightyellow;
+    position: sticky;
+    top: 0px;
+}
+.conteneur-nav{
+    position: absolute;
+    width: 100%;
+}
+nav label{
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0px;
+    text-align: center;
+    background-color: gold;
+}
+nav input[type=checkbox]{ /* la checkbox n'apparait pas mais on peut quand même l'activer via son label associé. Mais en cliquant sur le label, on active aussi la checkbox */
+    display:none;
+}
+nav input[type=checkbox]:checked + ul{
+    display: flex;
+    flex-flow: column wrap;
+}
+nav ul{
+    list-style-type: none;
+    display: none;
+    background-color: #555;
+}
+
+nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav ul li{
+    float: left;
+    /* display: inline-block; est aussi possible */
+    flex: 1 1 auto;
+    text-align: center;
+    position: relative; /* plus stcky */
+}
+
+nav a{
+    display: block; /* on tranforme l'élément a qui est inline en block (genre div). LIGNE TRES UTILE */
+    text-decoration: none; /* du coup le lien n'est plus bleu, ni sutligné en hover */
+    color: black;
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+}
+nav a:hover{
+    color: orange;
+    border-bottom: 2px solid gold;
+}
+
+li.deroulant:hover ul.sous{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+ul.sous{
+    display: flex;
+    flex-flow: column wrap;
+    z-index: 1000; 
+}
+
+ul.sous li{
+    flex: 1 1 auto;
+    text-align: left;
+}
+
+ul.sous a{
+    padding: 10px;
+    border-bottom: none;
+    background-color: rgba(200, 200, 200, 0.8);
+} 
+
+ul.sous a:hover{
+    border-bottom: none;
+    background-color: aliceblue;
+}
+
+.conteneur{
+    margin: 50px 20px;
+    height: 1500px;
+}
+
+@media screen and (min-width: 980px){
+    .conteneur-nav{
+        position: static;
+    }
+    nav label, nav input{
+        display: none;
+    }
+    nav input[type=checkbox]:checked + ul, nav ul{
+        display: flex;
+        flex-flow: row wrap;
+        background-color: white;
+    }
+    nav ul li{
+        position: relative;
+    }
+    nav a{
+        border-bottom: 2px solid transparent;
+    }
+    nav a:hover{
+        color: orange;
+        border-bottom: 2px solid gold;
+    }
+    div.conteneur-nav > ul > li > a{
+        color: black;
+    }
+    ul.sous{
+        display: none;
+        box-shadow: 0px 1px 2px #CCC;
+        background-color: white;
+        position: absolute;
+        width: 100%;
+    }
+    nav > div > ul li:hover .sous{
+        display: flex;
+        flex-flow: column wrap;
+    }
+    ul.sous a{
+        border-bottom: none;
+        background-color: white;
+    }
+    ul.sous a:hover{
+        border-bottom: none;
+        background-color: rgba(200, 200, 200, 0.1);
+    }
+    li.deroulant > a::after{
+        content:"▼";
+        font-size:12px;
+    }
+}
+
+
