@@ -1,9 +1,0 @@
-Exercice de jeu puissance 4 contr l(ordi)
-
-
-introduire :
-js objet
-get pluriel
-noeuds.
-
-faire transformation
