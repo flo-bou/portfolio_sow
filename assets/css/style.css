@@ -107,24 +107,17 @@ h2{
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 0.4rem;
-  /* font-weight: 800; */
 }
 
-.not-visible.posLeft{  /** Par défaut */
+.not-visible.slide-from-left{ 
   opacity: 0;
   transform: translate(-100px, 0px);
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
-.not-visible.posRight{  /** Par défaut */
+.not-visible.slide-from-right{
   opacity: 0;
   transform: translate(100px, 0px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.not-visible.posBottom{  /** Par défaut */
-  opacity: 0;
-  transform: translate(0px, 100px);
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
@@ -138,10 +131,6 @@ h2{
 
 :root {
   /* liste des variables */
-  /* https://colorhunt.co/palette/66990
-  https://colorhunt.co/palette/39317
-  https://colorhunt.co/palette/5271
-  https://colorhunt.co/palette/35642 */
 
   --c-bg-vlight: #fafafa;
   --c-bg-light: #ede9d0;
@@ -305,6 +294,10 @@ nav.navbar {
   background-color: #ECE1D2;
 }
 
+#projects > h2 {
+  color: #434040;
+}
+
 #projects .grid {
   display: grid;
   -ms-grid-columns: auto;
@@ -342,8 +335,8 @@ nav.navbar {
 #projects .grid div.card a picture {
   -o-object-fit: cover;
   object-fit: cover;
-  -webkit-filter: sepia(0.7) contrast(80%) brightness(0.8) saturate(150%);
-  filter: sepia(0.7) contrast(80%) brightness(0.8) saturate(150%);
+  -webkit-filter: sepia(0.5) contrast(90%);
+  filter: sepia(0.5) contrast(90%);
   /* filter: grayscale(20%) contrast(120%) brightness(1.1); */
 }
 
@@ -361,10 +354,6 @@ nav.navbar {
   /* valeur de base en hover */
   transition: transform 0.25s ease-out;
   /* transition vers une autre état (non hover) */
-}
-
-.txt-projects {
-  color: #434040;
 }
 
 /* ----------------- Section skills ----------------- */
@@ -421,114 +410,14 @@ nav.navbar {
   background-color: #CFBC9D;
 }
 
-#contact .txt-contact {
-  color: #fff;
-}
-
-/* #contact > div > p {
-  margin: -1.5em 0 1.5em 0;
-  margin-right: -12px;
-} */
-
-/* #contact > div > p button{
-  display: inline;
-  border: 2px solid transparent;
-  padding: 12px;
-  border-radius: 50%;
-  margin-left: 1rem;
-  font-size: 2rem;
-  transition: border-color 0.3s ease;
-  background-color: transparent;
-} */
-
-/* #contact > div > p button:hover{
-  border-color: #fff;
-  transition: border-color 0.3s ease;
-} */
-
-/* #contact > div > p button img{
-  height: 2.5rem;
-  filter: invert(100%);
-} */
-
-#contact > form div.form-group {
-  margin-bottom:1rem;
-}
-
-#contact > form div.form-group > label{
-  /* text-transform: uppercase; */
-  /* font-weight: 300; */
-  font-size: 1.25rem;
-}
-
-/* #contact > form div.form-group input#norobot { */
-  /* content: ""; */
-  /* line-height: 2em; */
-  /* font-size: 2em; */
-  /* display: inline-block; */
-  /* padding: 2em; */
-  /* width: 2em; */
-/* } */
-
- /* pour le captcha */
-/* #contact form div.form-group img.imagecap {
-  margin: auto 0 0 auto;
-  border: 1px solid var(---c-txt-vdark);
-  border-radius: 0.3em;
-  width: 100%;
-} */
-
-@media screen and (max-width: 991px) {
-  #contact > form div#invisible{
-    display: none;
-  }
-}
-
-#contact div#invisible div{
-  opacity: 0 !important;
-}
-
-#contact > p > span#COURRIER1::before{
-  content: "flore";
-}
-#contact > p > span#COURRIER1::after{
-  content: "nt.b@";
-}
-#contact > p > span#COURRIER2::before{
-  content: "gmx.";
-}
-#contact > p > span#COURRIER2::after{
-  content: "com";
-}
-
-#contact > p > img{
+#contact ul.list-unstyled img {
   height: 1em;
+  margin-bottom: 0.25em;
+}
+
+#contact ul.list-unstyled img.invert {
   filter: invert(100%);
 }
-
-/* ----------------- Toasts ------------------- */
-
-#toast-container{
-  position: fixed;
-  width: 100%;
-  top: 0;
-  /* left: auto; */
-  /* min-height: 300px; */
-  z-index: 2000;
-  /* overflow: hidden; */
-}
-
-#toast-container .toast{
-  transition: opacity 0.5s linear;
-  /* position: sticky; */
-  float: center;
-  margin: 1rem auto;
-  /* z-index: 2000; */
-}
-
-/* #toast-container button.btn-close{
-  
-} */
 
 /* ----------------- Section Footer ------------------- */
 

@@ -51,6 +51,8 @@
     <!-- <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">  -->
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js" defer></script>
     <noscript>
         <!--    <link rel="stylesheet" type="text/css" href="./assets/css/ss_noscript."> -->
     </noscript>
@@ -70,7 +72,9 @@
         <div id="main-navbar" class="collapse navbar-collapse justify-content-center bg-light">
             <ul class="navbar-nav">
                 <li class="mx-sm-4 mx-md-2 nav-item">
-                    <a href="#home" class="nav-link navigation-link"><!-- <i class="fa fa-home"></i> -->Accueil</a>
+                    <a href="#home" class="nav-link navigation-link">
+                        <!-- <i class="fa fa-home"></i> -->Accueil
+                    </a>
                 </li>
                 <li class="mx-sm-4 mx-md-2 nav-item">
                     <a href="#about" class="nav-link navigation-link">Pr&eacute;sentation</a>
@@ -89,7 +93,7 @@
     </nav>
 
     <!-- ----------------------------------------------------------------------- -->
-    <!--                              Section Home                               -->
+    <!--                              Section Home                             -->
     <!-- ----------------------------------------------------------------------- -->
 
     <section id="home" class="container-fluid main-container">
@@ -117,16 +121,16 @@
     <section id="about" class="container-fluid main-container d-flex flex-column justify-content-around">
         <div class="row align-content-around h-100">
             <!-- <div class="row justify-content-around align-items-center align-content-around my-auto align-self-center mh-100"> -->
-            <div class="col-12 col-md-6 col-xl-4 p-4 my-auto  slide-from-left">
+            <div class="col-12 col-md-6 col-xl-4 p-4 my-auto slide-from-left">
                 <img 
                     src="./img/illus/profil_161704_c_480_491.jpg"
                     srcset="./img/illus/profil_161704_c_480_491.jpg 480w, ./img/illus/profil_161704_c_720_736.jpg 600w"
-                    class="img-fluid rounded-circle p-4" 
+                    class="img-fluid rounded-circle" 
                     loading="lazy"
                 >
             </div>
             <div class="col-12 col-md-6 col-xl-8 p-4 my-auto text-white  slide-from-right">
-                <h2 class="txt-spring mb-3 pb-2 h1  posRigth">Qui suis-je ?</h2>
+                <h2 class="posBottom txt-spring mb-3 pb-2 h1">Qui suis-je ?</h2>
                 <p>
                     Je m'appelle <b class="txt-spring">Florent Boutonnet</b> et suis un jeune <b class="txt-spring">d&eacute;veloppeur web</b> brestois titulaire du titre de « d&eacute;veloppeur web et web mobile ».
                     D'un naturel curieux et volontaire, je suis suis capable d'intervenir sur <b class="txt-spring">toutes les &eacute;tapes de conception</b> d'un projet web.
@@ -142,7 +146,7 @@
     </section>
 
     <!-- ----------------------------------------------------------------------- -->
-    <!--                            Section Expérience                           -->
+    <!--                            Section Expérince                            -->
     <!-- ----------------------------------------------------------------------- -->
 
 
@@ -151,10 +155,10 @@
     <!-- ----------------------------------------------------------------------- -->
 
     <section id="projects" class="container-fluid main-container d-flex flex-column justify-content-around">
-        <h2 class="mb-3 pb-2 h1 slide-from-left">Travaux</h2>
+        <h2 class="posBottom txt-projects mb-3 pb-2 h1">Travaux</h2>
         <div class="container-fluid grid">
 
-            <div class="card m-0 p-0 overflow-hidden  slide-from-left">
+            <div class="card m-0 p-0 overflow-hidden slide-from-left">
                 <a href="./img/Rapport_de_stage-Florent_BOUTONNET-ENSTA_Bretagne.pdf" class="card-img-overlay" title="Voir le projet." target="_blank">
                     <img class="card-img-top" alt="Capture d'&eacute;cran du projet."  title="Cliquez pour voir le projet." loading="lazy"
                     src="./img/backg/c_pexels-pixabay-357514_640_640.webp"
@@ -167,7 +171,7 @@
                 </a>
             </div>
 
-            <div class="card m-0 p-0 overflow-hidden  slide-from-right">
+            <div class="card m-0 p-0 overflow-hidden slide-from-right">
                 <a href="./project/my-kanban/index.html" class="card-img-overlay" title="Voir le projet.">
                     <img class="card-img-top" alt="Capture d'&eacute;cran du projet."  title="Cliquez pour voir le projet." loading="lazy" src="./img/backg/c_pexels-artem-podrez-5716034_640_640.webp"
                     srcset="./img/backg/c_pexels-artem-podrez-5716034_400_400.webp 400w, ./img/backg/c_pexels-artem-podrez-5716034_640_640.webp 640w">
@@ -179,7 +183,7 @@
                 </a>
             </div>
 
-            <div class="card m-0 p-0 overflow-hidden  slide-from-left">
+            <div class="card m-0 p-0 overflow-hidden slide-from-left">
                 <a href="./project/Calculatrice_js/index.html" class="card-img-overlay" title="Voir le projet.">
                     <img class="card-img-top"  alt="Capture d'&eacute;cran du projet."  title="Cliquez pour voir le projet." loading="lazy" src="./img/backg/c_pexels-karolina-grabowska-4386293_640_640.webp"
                     srcset="./img/backg/c_pexels-karolina-grabowska-4386293_400_400.webp 400w, ./img/backg/c_pexels-karolina-grabowska-4386293_640_640.webp 640w">
@@ -225,12 +229,12 @@
 
     <section id="skills" class="container-fluid main-container d-flex flex-column justify-content-around">
         <!-- <div class="h-100 my-auto"> -->
-        <h2 class="text-white mb-3 pb-2 h1  slide-from-left">Comp&eacute;tences</h2>
+        <h2 class="posBottom text-white mb-3 pb-2 h1">Comp&eacute;tences</h2>
         <div class="row">
 
             <div class="col-12 col-xl-6 my-auto">
 
-                <div id="Front" class="card  slide-from-left my-3">
+                <div id="Front" class="card slide-from-left my-3">
                     <div class="row no-gutters">
                         <div class="d-none d-sm-flex col-3 p-md-2 p-lg-4">
                             <img src="./img/icon/B_html.svg" class="card-img-top h-100" alt="Icone de HTML." title="Icone de HTML." loading="lazy">
@@ -248,7 +252,7 @@
                     </div>
                 </div>
 
-                <div id="Back" class="card  slide-from-left my-3">
+                <div id="Back" class="card slide-from-left my-3">
                     <div class="row no-gutters">
                         <div class="d-none d-sm-flex col-3 p-md-2 p-lg-4">
                             <img src="./img/icon/B_php.svg" class="card-img-top h-100" alt="Icone de PHP." title="Icone de PHP." loading="lazy">
@@ -271,7 +275,7 @@
 
             <div class="col-12 col-xl-6 h-100 my-auto">
 
-                <div id="BDD" class="card  slide-from-right my-3">
+                <div id="BDD" class="card slide-from-right my-3">
                     <div class="row no-gutters">
                         <div class="d-none d-sm-flex col-3 p-md-2 p-lg-4">
                             <img src="./img/icon/B_ppt.svg" class="card-img-top h-100" alt="Icone de fichier PowerPoint." title="Icone de fichier PowerPoint." loading="lazy">
@@ -289,7 +293,7 @@
                     </div>
                 </div>
 
-                <div id="Outils" class="card  slide-from-right my-3">
+                <div id="Outils" class="card slide-from-right my-3">
                     <div class="row no-gutters">
                         <div class="d-none d-sm-flex col-3 p-md-2 p-lg-4">
                             <img src="./img/icon/B_ics-format.svg" class="card-img-top h-100" alt="Icone de calendrier." title="Icone de calendrier." loading="lazy">
@@ -310,8 +314,8 @@
             </div>
 
         </div>
-        <div class="text-end  slide-from-right">
-            <a class="btn btn-lg btn-primary" target="_blank" href="./img/CV-Florent_BOUTONNET-Developpeur_Web.pdf">
+        <div class="text-right  slide-from-right">
+            <a class="btn btn-lg btn-primary" target="_blank" href="./img/CV_Florent_BOUTONNET_Developpeur_Web_Jr.pdf">
                 T&eacute;l&eacute;charger mon CV
             </a>
         </div>
@@ -321,83 +325,83 @@
     <!--                             Section Contact                             -->
     <!-- ----------------------------------------------------------------------- -->
 
-    <section id="contact" class="container-fluid main-container d-flex flex-column justify-content-around">
-        <h2 class="text-white mb-3 pb-2 h1  slide-from-left">Contact</h2>
+    <section id="contact"
+        class="container-fluid main-container d-flex flex-column justify-content-around">
+        <h2 class="posBottom txt-contact mb-3 pb-2 h1">Contact</h2>
 
-        <!-- <form id="theForm" class="container text-white py-5">
+        <!-- <div class="container text-white py-5" id="theForm"> -->
+        <form id="theForm" class="container text-white py-5">
             <input id="Sendmail" name="Sendmail" type="hidden" value="Sendmail" />
-            <div class="row"> -->
-                <!-- <div class="col-12 col-lg-6 form-group  slide-from-left">
+
+            <div class="row">
+                <div class="col-12 col-lg-6 form-group slide-from-left">
                     <label for="name" class="h5">Nom</label>
                     <input type="text" name="name" id="name" class="form-control form-control-lg" required="required" />
                 </div>
 
-                <div class="col-12 col-lg-6 form-group  slide-from-right">
+                <div class="col-12 col-lg-6 form-group slide-from-right">
                     <label for="email" class="h5">Courriel</label>
                     <input type="text" name="email" id="email" class="form-control form-control-lg" required="required" />
                 </div>
 
-                <div class="col-12 form-group  posBottom">
+                <div class="col-12 form-group posBottom">
                     <label for="message" class="h5">Message</label>
                     <textarea name="message" id="message" class="form-control form-control-lg" rows="4" placeholder="Bonjour, " required="required"></textarea>
-                </div> -->
+                </div>
 
-                <!-- <div class="col-12 col-sm-6 col-lg-3 form-group  slide-from-left">
+                <!-- <div class="col-12 col-sm-6 col-lg-3 form-group slide-from-left">
                     <label class="h5">&nbsp;</label>
                     <img src="" class="imagecap form-control form-control-lg mb-0"
                         title="Entrer the characters seen in this captcha image" alt="Captcha image">
                 </div> -->
 
-                <!-- <div class="col-12 col-md-6 col-lg-4 form-group  slide-from-left">
+                <div class="col-12 col-md-6 col-lg-4 form-group slide-from-left ">
                     <label class="h5">&nbsp;</label>
+                    <!-- <label for="norobot" class="h5"> -->
                     <div class="input-group-lg form-check">
                         <input id="norobot" type="checkbox" class="form-check-input">
+                        <!-- <span class="h5">Je ne suis pas un robot</span> -->
                         <label class="form-check-label h5" for="norobot">Je ne suis pas un robot </label>
                     </div>
-                </div> -->
+                </div>
 
                 <!-- Espace vide -->
-                <!-- <div class="col-0 col-lg-4 form-group  posBottom invisible">
+                <div id="invisible" class="col-0 col-lg-4 form-group posBottom">
                     <label class="h5">&nbsp;</label>
                     <div class="form-control form-control-lg mb-0"></div>
-                </div> -->
+                </div>
 
-                <!-- <div class="col-12 col-md-6 col-lg-4 form-group  slide-from-right">
+                <div class="col-12 col-md-6 col-lg-4 form-group slide-from-right">
+                    <!-- <p>Les champs avec asterisque (*) doivent &ecirc;tre renseign&eacute;s</p> -->
                     <label class="h5">&nbsp;</label>
-                    <button type="submit" onclick="ajaxMailSender();" class="btn btn-lg btn-primary form-control form-control-lg">Envoyer</button>
-                </div> -->
-            <!-- </div>
-        </form> -->
-
-        <p class="container text-white pb-2 mb-3">
-            <div class="row">
-                <ul class="list-unstyled col-9 col-md-6 col-xl-4 mx-auto  slide-from-right">
-                    <li class="h4">
-                        <a href="mailto:florent.b@gmx.com" class="icon-link link-light link-underline link-underline-opacity-0 link-underline-opacity-75-hover"><img src="./img/icon/I_black-back-closed-envelope-shape.svg" alt="Icone d'une enveloppe." class="invert" loading="lazy">&nbsp;florent.b@gmx.com</a>
-                    </li>
-                    <li class="h4">
-                        <a href="https://www.linkedin.com/in/florent-boutonnet/" class="icon-link link-light link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank"><img src="./img/icon/linkedin.svg" alt="Icone de LinkedIn." class="invert" loading="lazy">&nbsp;LinkedIn</a>
-                    </li>
-                    <li class="h4">
-                        <a href="https://github.com/flo-bou" class="icon-link link-light link-underline link-underline-opacity-0 link-underline-opacity-75-hover" target="_blank"><img src="./img/icon/github-brands.svg" alt="Icone de GitHub." class="invert" loading="lazy">&nbsp;GitHub</a>
-                    </li>
-                </ul>
+                    <i class="bi-alarm"></i>
+                    <button type="submit" onclick="ajaxMailSender();" class="btn-block btn-primary text-center form-control form-control-lg mb-0">Envoyer</button>
+                </div>
             </div>
+        </form>
+        <!-- </div> -->
+
+        <p class="container text-right txt-contact pb-2 mb-3 h5  slide-from-right">
+            <!-- Vous pouvez aussi me contacter via l'adresse  -->
+            <span id="COURRIER"></span><span id="COURRIER1"></span><span id="COURRIER2"></span>
+            <img src="./img/icon/I_black-back-closed-envelope-shape.svg" alt="Icone d'une enveloppe." loading="lazy">
         </p>
 
         <!-- Footer  -->
         <footer id="footer">
             <div class="container-fluid text-white text-center">
                 <p>
-                    Copyright &copy; 2020-2023 Florent Boutonnet –
+                    Copyright &copy; 2020-2021 Florent Boutonnet –
                     <a class="text-light" href="./humans.txt">Full credits</a>
                 </p>
             </div>
         </footer>
     </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<script src="./assets/js/script.js" defer></script>
+    <!-- messages toasts -->
+    <div id="toast-container">
+        <!-- Les toasts vont ici  -->
+    </div>
 </body>
 
 </html>
